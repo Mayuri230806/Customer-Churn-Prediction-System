@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Customer Churn Prediction System</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+color:white;
+overflow-x:hidden;
+
+}
+
+/* Navbar */
+
+nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+
+}
+
+.logo{
+
+font-size:30px;
+font-weight:bold;
+
+}
+
+.logo span{
+
+color:#38bdf8;
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+
+}
+
+nav ul li{
+
+margin-left:30px;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#38bdf8;
+
+}
+
+/* Hero */
+
+.hero{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:70px 80px;
+
+}
+
+.hero-text{
+
+width:55%;
+
+}
+
+.hero-text h1{
+
+font-size:55px;
+line-height:70px;
+margin-bottom:20px;
+
+}
+
+.hero-text h1 span{
+
+color:#38bdf8;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+line-height:30px;
+color:#dbeafe;
+margin-bottom:30px;
+
+}
+
+.btn{
+
+padding:15px 35px;
+background:#38bdf8;
+text-decoration:none;
+color:white;
+font-size:18px;
+border-radius:40px;
+transition:.4s;
+display:inline-block;
+
+}
+
+.btn:hover{
+
+background:white;
+color:#1e3a8a;
+transform:translateY(-5px);
+
+}
+
+.hero-icon{
+
+width:40%;
+text-align:center;
+
+}
+
+.hero-icon i{
+
+font-size:220px;
+color:#38bdf8;
+animation:float 3s infinite ease-in-out;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+
+}
+
+/* Features */
+
+.features{
+
+padding:70px 80px;
+
+}
+
+.features h2{
+
+text-align:center;
+font-size:38px;
+margin-bottom:50px;
+
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card i{
+
+font-size:50px;
+color:#38bdf8;
+margin-bottom:20px;
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+color:#dbeafe;
+line-height:28px;
+
+}
+
+/* Footer */
+
+footer{
+
+text-align:center;
+padding:30px;
+margin-top:50px;
+background:rgba(0,0,0,.2);
+
+}
+
+footer p{
+
+color:#ddd;
+
+}
+
+@media(max-width:900px){
+
+nav{
+
+padding:20px;
+
+flex-direction:column;
+
+}
+
+.hero{
+
+flex-direction:column;
+padding:40px 20px;
+
+}
+
+.hero-text{
+
+width:100%;
+text-align:center;
+
+}
+
+.hero-icon{
+
+width:100%;
+margin-top:40px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<span>ChurnAI</span>
+
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+
+<li><a href="/basic">Predict</a></li>
+
+<li><a href="/about">About</a></li>
+
+<li><a href="/services">Services</a></li>
+
+<li><a href="/contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+Predict <span>Customer Churn</span><br>
+
+Using Machine Learning
+
+</h1>
+
+<p>
+
+Customer Churn Prediction helps businesses identify customers who are likely to leave their services. Using Machine Learning, companies can take preventive actions, improve customer satisfaction, and reduce revenue loss.
+
+</p>
+
+<a href="/basic" class="btn">
+
+<i class="fa-solid fa-arrow-right"></i>
+
+Start Prediction
+
+</a>
+
+</div>
+
+<div class="hero-icon">
+
+<i class="fa-solid fa-users-viewfinder"></i>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<h2>Why Choose Our System?</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-brain"></i>
+
+<h3>AI Powered</h3>
+
+<p>
+
+Built using Logistic Regression to accurately predict customer churn.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-gauge-high"></i>
+
+<h3>Fast Prediction</h3>
+
+<p>
+
+Get instant customer churn prediction within a second.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Reliable</h3>
+
+<p>
+
+Supports business decisions using customer behavior analysis.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Customer Churn Prediction System | Developed by Mayuri Mangal
+
+</p>
+
+</footer>
+
+</body>
+</html>

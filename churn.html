@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prediction Result</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+
+}
+
+.card{
+
+width:500px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:20px;
+text-align:center;
+color:white;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+}
+
+.card h1{
+
+margin-bottom:20px;
+font-size:35px;
+
+}
+
+.icon{
+
+font-size:80px;
+margin-bottom:20px;
+
+}
+
+.success{
+
+color:#00ff99;
+
+}
+
+.danger{
+
+color:#ff4d4d;
+
+}
+
+.result{
+
+font-size:30px;
+font-weight:bold;
+margin-bottom:20px;
+
+}
+
+.info{
+
+font-size:18px;
+line-height:35px;
+
+}
+
+.btn{
+
+display:inline-block;
+margin-top:30px;
+padding:14px 35px;
+background:#38bdf8;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:white;
+color:#1e3a8a;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+{% if prediction == 1 %}
+
+<div class="icon danger">⚠️</div>
+
+<div class="result danger">
+
+Customer is Likely to Churn
+
+</div>
+
+{% else %}
+
+<div class="icon success">✅</div>
+
+<div class="result success">
+
+Customer Will Stay
+
+</div>
+
+{% endif %}
+
+<div class="info">
+
+<b>Prediction Probability :</b>
+
+{{ probability }} %
+
+<br><br>
+
+<b>Risk Level :</b>
+
+{% if probability >= 80 %}
+
+High Risk 🔴
+
+{% elif probability >= 50 %}
+
+Medium Risk 🟠
+
+{% else %}
+
+Low Risk 🟢
+
+{% endif %}
+
+</div>
+
+<a href="/basic" class="btn">
+
+Predict Again
+
+</a>
+
+<a href="/" class="btn">
+
+Home
+
+</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About | Customer Churn Prediction</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+color:white;
+
+}
+
+/* Navbar */
+
+nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:bold;
+
+}
+
+.logo span{
+
+color:#38bdf8;
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+
+}
+
+nav ul li{
+
+margin-left:30px;
+
+}
+
+nav ul li a{
+
+color:white;
+text-decoration:none;
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#38bdf8;
+
+}
+
+/* Hero */
+
+.hero{
+
+text-align:center;
+padding:60px 20px;
+
+}
+
+.hero i{
+
+font-size:80px;
+color:#38bdf8;
+margin-bottom:20px;
+
+}
+
+.hero h1{
+
+font-size:48px;
+margin-bottom:15px;
+
+}
+
+.hero p{
+
+max-width:850px;
+margin:auto;
+line-height:30px;
+color:#dbeafe;
+font-size:18px;
+
+}
+
+/* Cards */
+
+.container{
+
+width:90%;
+margin:auto;
+padding:50px 0;
+
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:20px;
+transition:.4s;
+text-align:center;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card i{
+
+font-size:50px;
+margin-bottom:20px;
+color:#38bdf8;
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+line-height:28px;
+color:#dbeafe;
+
+}
+
+/* Tech */
+
+.tech{
+
+margin-top:60px;
+text-align:center;
+
+}
+
+.tech h2{
+
+margin-bottom:30px;
+font-size:35px;
+
+}
+
+.tech-box{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+
+}
+
+.tech-box div{
+
+padding:15px 30px;
+background:rgba(255,255,255,.12);
+border-radius:40px;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.tech-box div:hover{
+
+background:#38bdf8;
+transform:scale(1.05);
+
+}
+
+/* Footer */
+
+footer{
+
+margin-top:70px;
+padding:25px;
+text-align:center;
+background:rgba(0,0,0,.2);
+
+}
+
+footer i{
+
+margin:0 10px;
+font-size:22px;
+color:#38bdf8;
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+<i class="fa-solid fa-chart-line"></i>
+<span> ChurnAI</span>
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+<li><a href="/basic">Predict</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/services">Services</a></li>
+<li><a href="/contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<i class="fa-solid fa-users-viewfinder"></i>
+
+<h1>About Our Project</h1>
+
+<p>
+
+Customer Churn Prediction is a Machine Learning application that helps businesses identify customers who are likely to leave their services. By analyzing customer information such as contract type, monthly charges, tenure, internet services, and payment methods, the system predicts churn in advance. This enables companies to improve customer satisfaction, reduce revenue loss, and build long-term customer relationships.
+
+</p>
+
+</section>
+
+<div class="container">
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-brain"></i>
+
+<h3>Machine Learning</h3>
+
+<p>
+
+Our system uses Logistic Regression to analyze customer behavior and accurately predict whether a customer is likely to churn.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-chart-column"></i>
+
+<h3>Business Insights</h3>
+
+<p>
+
+Organizations can identify high-risk customers early and offer personalized discounts, better plans, or support to improve customer retention.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Reliable Predictions</h3>
+
+<p>
+
+The model is trained using customer data after preprocessing, encoding, and feature engineering to provide reliable and consistent predictions.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="tech">
+
+<h2>Technologies Used</h2>
+
+<div class="tech-box">
+
+<div>🐍 Python</div>
+
+<div>📊 Pandas</div>
+
+<div>🤖 Scikit-Learn</div>
+
+<div>🌐 Flask</div>
+
+<div>🎨 HTML</div>
+
+<div>💎 CSS</div>
+
+<div>⚡ JavaScript</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+
+Developed by <b>Mayuri Mangal</b>
+
+</p>
+
+<br>
+
+<i class="fab fa-github"></i>
+
+<i class="fab fa-linkedin"></i>
+
+<i class="fab fa-instagram"></i>
+
+</footer>
+
+</body>
+</html>
