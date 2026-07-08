@@ -34,6 +34,10 @@ A Machine Learning based web application that predicts whether a customer is lik
 <img width="1908" height="968" alt="image" src="https://github.com/user-attachments/assets/51d55339-981b-4097-a976-9286e45508d3" />
 
 
-## 📸predicted result
+## Predicton form
+<img width="1910" height="952" alt="image" src="https://github.com/user-attachments/assets/c67732a7-c20c-497d-a38a-0cbe82984b5b" />
+
+
+## predicted result
 <img width="1912" height="967" alt="image" src="https://github.com/user-attachments/assets/f2bf2e6b-67ef-4e12-a4ed-23f663314a04" />
 
