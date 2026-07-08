@@ -28,3 +28,12 @@ A Machine Learning based web application that predicts whether a customer is lik
 - One-Hot Encoding
 - Feature Engineering
 - Model Serialization using Joblib
+
+
+## Home page
+<img width="1908" height="968" alt="image" src="https://github.com/user-attachments/assets/51d55339-981b-4097-a976-9286e45508d3" />
+
+
+## 📸predicted result
+<img width="1912" height="967" alt="image" src="https://github.com/user-attachments/assets/f2bf2e6b-67ef-4e12-a4ed-23f663314a04" />
+
